@@ -1,20 +1,24 @@
+.content {
+    opacity: .1;
+}
 .modal-overlay {
     z-index:999;
     position: fixed;
     left: 0; top:0;
     height: 100%;
     width: 100%;
-    background-color: black;
-    opacity: .1;
+    background-color: transparent;
+    /*opacity: .1;*/
 }
 
 .modal-dialog {
+    box-shadow: 0 4px 23px 5px rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0,0,0,0.15);
     z-index:1000;
     background-color: white;
-    border-style: solid;
+    /*border-style: solid;
     border-color: black;
+    border-width: 1px; */
     border-radius: 3px;
-    border-width: 1px;
     padding: 10px;
     min-width: 100px;
     max-width: 400px;
@@ -26,3 +30,14 @@
     margin: auto;
     left:0; right:0;top:0; bottom:0;
 }
+
+.modal-dialog-close {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    right: -8px;
+    top: -9px;
+    background: url('/static/images/delete_on.png') no-repeat;
+}
+
+#pmc-close:hover {background: url('/static/images/delete_off.png') no-repeat;}

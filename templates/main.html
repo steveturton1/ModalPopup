@@ -9,16 +9,25 @@
 </head>
 <body>
 
-    <div onclick="test()">Click Me To Show Modal Dialog</div>
-    <div>
-        I am the main bit<br \>so there
-        <br \>a<br \>b<br \>c<br \>d<br \>e<br \>f<br \>g<br \>h<br \>i<br \>j<br \>k
-        <br \>a<br \>b<br \>c<br \>d<br \>e<br \>f<br \>g<br \>h<br \>i<br \>j<br \>k
+    <div class="content">
+        <div onclick="test()">Click Me To Show Modal Dialog<br \><br \></div>
+        <div>
+            I think there are 2 options to do this.  Have everything (apart from modal div) in a .content class,
+            and then set content class opaque to .1 which nicely greys out everything and then show overlay (so user
+            can't click content and then show message. Or....   <br \><br \>
+
+            Just show overlay(with opaque set) and message div - but this won't really grey everything out in the background.
+
+            <br \>a<br \>b<br \>c<br \>d<br \>e<br \>f<br \>g<br \>h<br \>i<br \>j<br \>k
+            <br \>a<br \>b<br \>c<br \>d<br \>e<br \>f<br \>g<br \>h<br \>i<br \>j<br \>k
+        </div>
     </div>
 
     <div id="popup-modal-overlay" class="modal-overlay"></div>
     <div id="popup-modal-container" class="modal-dialog">
+        <div id="pmc-close" class="modal-dialog-close"></div>
         I am the modal bit with a message for you.  So here is where I show you some stuff for you to read.
     </div>
+
 </body>
 </html>
