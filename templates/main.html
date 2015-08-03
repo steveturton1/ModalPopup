@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Test Modal Dialog</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}"
+    <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jsrender.js') }}"></script>
+</head>
+<body>
+
+    <div onclick="test()">Click Me To Show Modal Dialog</div>
+    <div>
+        I am the main bit<br \>so there
+        <br \>a<br \>b<br \>c<br \>d<br \>e<br \>f<br \>g<br \>h<br \>i<br \>j<br \>k
+        <br \>a<br \>b<br \>c<br \>d<br \>e<br \>f<br \>g<br \>h<br \>i<br \>j<br \>k
+    </div>
+
+    <div id="popup-modal-overlay" class="modal-overlay"></div>
+    <div id="popup-modal-container" class="modal-dialog">
+        I am the modal bit with a message for you.  So here is where I show you some stuff for you to read.
+    </div>
+</body>
+</html>

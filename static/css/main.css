@@ -1,0 +1,28 @@
+.modal-overlay {
+    z-index:999;
+    position: fixed;
+    left: 0; top:0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .1;
+}
+
+.modal-dialog {
+    z-index:1000;
+    background-color: white;
+    border-style: solid;
+    border-color: black;
+    border-radius: 3px;
+    border-width: 1px;
+    padding: 10px;
+    min-width: 100px;
+    max-width: 400px;
+    min-height: 100px;
+    max-height: 200px;
+
+    /* We need to know the height and width (set above) for it to be centered */
+    position: absolute;
+    margin: auto;
+    left:0; right:0;top:0; bottom:0;
+}
