@@ -37,7 +37,7 @@
     height: 16px;
     right: -8px;
     top: -9px;
-    background: url('/static/images/delete_on.png') no-repeat;
+    background: url('/static/images/DIALOG_CLOSE.png') no-repeat;
 }
 
-#pmc-close:hover {background: url('/static/images/delete_off.png') no-repeat;}
+#pmc-close:hover {background: url('/static/images/DIALOG_CLOSE_HOVER.png') no-repeat;}
