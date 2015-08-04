@@ -10,7 +10,8 @@ function showModal() {
     //    $(".modal-dialog").css("visibility","visible");
     //});
 
-    $(".content").fadeTo('fast', 0.1);
+    //$(".content").fadeTo('fast', 0.1);
+    $(".content").css("opacity", "0.1");
     $(".modal-overlay").css("visibility","visible");
     $(".modal-dialog").css("visibility","visible");
 };
