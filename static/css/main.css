@@ -33,7 +33,8 @@ body {
     max-height: 175px;
 
     /* We need to know the height and width (set above) for it to be centered */
-    position: absolute;
+
+    position: fixed;    /* So it stays put even when scrolling */
     margin: auto;
     left:0; right:0;top:0; bottom:0;
     /*color: #333;*/
