@@ -3,14 +3,16 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Test Modal Dialog</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}"
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}"/>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-1.7.2.min.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='js/jsrender.js') }}"></script>
 </head>
+
 <body>
 
     <div class="content">
-        <div onclick="test()">Click Me To Show Modal Dialog<br \><br \></div>
+        <div onclick="showModal()">[Click Me] To Show Modal Dialog<br \><br \></div>
         <div>
             I think there are 2 options to do this.  Have everything (apart from modal div) in a .content class,
             and then set content class opaque to .1 which nicely greys out everything and then show overlay (so user
@@ -18,15 +20,28 @@
 
             Just show overlay(with opaque set) and message div - but this won't really grey everything out in the background.
 
+            <br /><br />
+            If you don't know the height then you could just set the top, don't think it matters if it doesn't center vertically.
             <br \>a<br \>b<br \>c<br \>d<br \>e<br \>f<br \>g<br \>h<br \>i<br \>j<br \>k
             <br \>a<br \>b<br \>c<br \>d<br \>e<br \>f<br \>g<br \>h<br \>i<br \>j<br \>k
         </div>
     </div>
 
-    <div id="popup-modal-overlay" class="modal-overlay"></div>
+    <div id="popup-modal-overlay" class="modal-overlay" onclick="pmo_animate()"></div>
     <div id="popup-modal-container" class="modal-dialog">
-        <div id="pmc-close" class="modal-dialog-close"></div>
-        I am the modal bit with a message for you.  So here is where I show you some stuff for you to read.
+        <div id="pmc-close" class="modal-dialog-close" onclick="hideModal()"></div>
+        <div id="pmc-title">
+            Some Title
+        </div>
+        <div id="pmc-content">
+            I am the modal bit with a message for you.  So here is where I show you some stuff for you to read.
+            <br /><br />
+            But you need to know the height and width of this div so it centers correctly.
+        </div>
+        <div id="pmc-buttons">
+            <button onclick="hideModal()">Some OK Button</button>
+            <button onclick="hideModal()">Cancel</button>
+        </div>
     </div>
 
 </body>
